@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminla Chiapaneca</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css">
+    <link rel="icon" type="image/png" href="./src/img/logo.jpg">
+</head>
+<body>
+    <header class="sticky-bar">
+        <div class="logo-container">
+            <img src="./src/img/logo.jpg" alt="Logo" class="logo">
+            <h1 class="sticky-title">Ciudades "Chiapanecas"</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="main-container">
+            <div class="form-container">
+                <h2>Agregar ruta:</h2>
+                <div class="input-group">
+                    <input type="text" placeholder="Ciudad" id="ciudad">
+                    <button type="button" id="AgregarCiudad">Agregar</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Ciudad Inicio" id="ciudadInicio">
+                    <input type="text" placeholder="Ciudad Destino" id="ciudadDestino">
+                    <input type="text" placeholder="Distancia" id="distancia">
+                    <button type="button" id="AgregarRuta">Agregar Ruta</button>
+                </div>
+            </div>
+
+            <div class="output-container">
+                <button type="button" id="buttonProfundidad">Ver mapa en recorrido de profundidad</button>
+                <button type="button" id="buttonAnchura">Ver mapa en recorrido de anchura</button>
+                <div id="MostrarRecorridos"></div>
+                <div id="MostrarRecorridosAn"></div>
+                <p>Complete los campos para encontrar el camino más corto:</p>
+                <div class="input-group">
+                    <input type="text" id="ciudadInicioCorta" placeholder="Ciudad Inicio">
+                    <input type="text" id="ciudadDestinoCorta" placeholder="Ciudad Destino">
+                    <button type="button" id="rutaMasCorta">Buscar</button>
+                </div>
+                <div id="mostrarRutaCorta"></div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./src/controllers/script.mjs"></script>
+</body>
+</html>
+
